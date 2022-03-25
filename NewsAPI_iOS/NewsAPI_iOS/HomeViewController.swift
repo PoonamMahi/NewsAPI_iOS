@@ -11,10 +11,13 @@ import UIKit
 class HomeViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    let searchController = UISearchController(searchResultsController: nil)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupTableViewUI()
+        searchBarSetup()
     }
     
     //TableView setup
@@ -25,10 +28,25 @@ class HomeViewController: UIViewController {
         tableView.tableFooterView = UIView()
     }
     
+    // setting up searchBar
+    func searchBarSetup(){
+        navigationItem.hidesSearchBarWhenScrolling = true
+        navigationController?.view.backgroundColor = .white
+        navigationItem.searchController = searchController
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Search by article, news"
+        searchController.searchBar.tintColor = .black
+        searchController.searchBar.textContentType = UITextContentType(rawValue: "")
+        searchController.searchBar.searchTextField.font = UIFont(name: "Helvetica Neue", size: 14)
+    }
+    
     @IBAction func filterAction(_ sender: Any) {
         print("filter button pressed")
         
     }
+    
+    
     
 
 }
@@ -46,5 +64,11 @@ extension HomeViewController : UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
-    
+}
+
+//MARK:- search bar delegate function
+extension HomeViewController:UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+       
+    }
 }
