@@ -13,6 +13,11 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     let searchController = UISearchController(searchResultsController: nil)
     
+    var selectedCountry = "in"
+    var selectedCategory = "entertainment"
+    var selectedIndexcountry : Int = 0
+    var selectedIndexcategory : Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -43,6 +48,11 @@ class HomeViewController: UIViewController {
     
     @IBAction func filterAction(_ sender: Any) {
         print("filter button pressed")
+        let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "FilterViewController") as! FilterViewController
+        vc.delegate = self
+        vc.selectedIndexcountry = selectedIndexcountry
+        vc.selectedIndexcategory = selectedIndexcategory
+        self.present(vc, animated: true, completion: nil)
         
     }
     
@@ -71,4 +81,21 @@ extension HomeViewController:UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
        
     }
+}
+
+//MARK: - Protocol Use
+
+extension HomeViewController: filterDataPassing{
+    func filterDataPass(selecedCountry: String, selectedCategory: String, selectedIndexcountry: Int, selectedIndexcategory: Int) {
+        
+        self.selectedCategory = selectedCategory
+        self.selectedIndexcategory = selectedIndexcategory
+        self.selectedIndexcountry = selectedIndexcountry
+        self.selectedCountry = selecedCountry
+        
+        //api call
+    }
+    
+    
+    
 }

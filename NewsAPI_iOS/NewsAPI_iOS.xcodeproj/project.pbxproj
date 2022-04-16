@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D6DC446280AA1AB006216ED /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6DC445280AA1AB006216ED /* FilterViewController.swift */; };
+		6D6DC448280AA264006216ED /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6DC447280AA264006216ED /* CustomCollectionViewCell.swift */; };
 		6DE8781F27ED95D600D237EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE8781E27ED95D600D237EA /* AppDelegate.swift */; };
 		6DE8782127ED95D600D237EA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE8782027ED95D600D237EA /* SceneDelegate.swift */; };
 		6DE8782327ED95D600D237EA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE8782227ED95D600D237EA /* HomeViewController.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6D6DC445280AA1AB006216ED /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		6D6DC447280AA264006216ED /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
 		6DE8781B27ED95D600D237EA /* NewsAPI_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsAPI_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DE8781E27ED95D600D237EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6DE8782027ED95D600D237EA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +70,8 @@
 				6DE8782927ED95D700D237EA /* LaunchScreen.storyboard */,
 				6DE8782C27ED95D700D237EA /* Info.plist */,
 				6DE8783227EE40D500D237EA /* newsCardTableViewCell.swift */,
+				6D6DC445280AA1AB006216ED /* FilterViewController.swift */,
+				6D6DC447280AA264006216ED /* CustomCollectionViewCell.swift */,
 			);
 			path = NewsAPI_iOS;
 			sourceTree = "<group>";
@@ -142,9 +148,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				6DE8783327EE40D500D237EA /* newsCardTableViewCell.swift in Sources */,
+				6D6DC448280AA264006216ED /* CustomCollectionViewCell.swift in Sources */,
 				6DE8782327ED95D600D237EA /* HomeViewController.swift in Sources */,
 				6DE8781F27ED95D600D237EA /* AppDelegate.swift in Sources */,
 				6DE8782127ED95D600D237EA /* SceneDelegate.swift in Sources */,
+				6D6DC446280AA1AB006216ED /* FilterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
