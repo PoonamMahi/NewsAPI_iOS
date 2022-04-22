@@ -70,8 +70,53 @@
 				D9DC16F4097B6ABD7385973F /* Pods-NewsAPI_iOS.debug.xcconfig */,
 				E77F124788D107F1282F3334 /* Pods-NewsAPI_iOS.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		6D8F66D72812B19000C22546 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6D8F66D328113D9400C22546 /* NewsDataModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6D8F66D82812B1A000C22546 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6DC65E382811397F001FDDC8 /* SourceWebNewsViewController.swift */,
+				6D6DC445280AA1AB006216ED /* FilterViewController.swift */,
+				6DE8782227ED95D600D237EA /* HomeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6D8F66D92812B1B200C22546 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6DE8782427ED95D600D237EA /* Main.storyboard */,
+				6D6DC447280AA264006216ED /* CustomCollectionViewCell.swift */,
+				6DE8783227EE40D500D237EA /* newsCardTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6D8F66DA2812B1BD00C22546 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				6DE8782027ED95D600D237EA /* SceneDelegate.swift */,
+				6DE8781E27ED95D600D237EA /* AppDelegate.swift */,
+				6DC65E3A28113C2A001FDDC8 /* Extensions.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		6D8F66DB2812B1C500C22546 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				6D8F66D528113DFF00C22546 /* APIManager.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		6DE8781227ED95D600D237EA = {
@@ -95,20 +140,14 @@
 		6DE8781D27ED95D600D237EA /* NewsAPI_iOS */ = {
 			isa = PBXGroup;
 			children = (
-				6DE8781E27ED95D600D237EA /* AppDelegate.swift */,
-				6DE8782027ED95D600D237EA /* SceneDelegate.swift */,
-				6DE8782227ED95D600D237EA /* HomeViewController.swift */,
-				6DE8782427ED95D600D237EA /* Main.storyboard */,
+				6D8F66DB2812B1C500C22546 /* Networking */,
+				6D8F66DA2812B1BD00C22546 /* Helper */,
+				6D8F66D92812B1B200C22546 /* View */,
+				6D8F66D82812B1A000C22546 /* Controller */,
+				6D8F66D72812B19000C22546 /* Model */,
 				6DE8782727ED95D700D237EA /* Assets.xcassets */,
 				6DE8782927ED95D700D237EA /* LaunchScreen.storyboard */,
 				6DE8782C27ED95D700D237EA /* Info.plist */,
-				6DE8783227EE40D500D237EA /* newsCardTableViewCell.swift */,
-				6D6DC445280AA1AB006216ED /* FilterViewController.swift */,
-				6D6DC447280AA264006216ED /* CustomCollectionViewCell.swift */,
-				6DC65E382811397F001FDDC8 /* SourceWebNewsViewController.swift */,
-				6DC65E3A28113C2A001FDDC8 /* Extensions.swift */,
-				6D8F66D328113D9400C22546 /* NewsDataModel.swift */,
-				6D8F66D528113DFF00C22546 /* APIManager.swift */,
 			);
 			path = NewsAPI_iOS;
 			sourceTree = "<group>";
